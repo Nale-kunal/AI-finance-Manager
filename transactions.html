@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - Personal Finance Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3 class="text-center py-3">Finance Manager</h3>
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+        <a href="chatbot.html"><i class="fas fa-robot"></i> Chatbot</a>
+        <a href="report.html"><i class="fas fa-chart-line"></i> Reports</a>
+        <a href="bank-passbook.html"><i class="fas fa-book"></i> Bank Passbook</a>
+        <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+        <a href="categorization.html"><i class="fas fa-tags"></i> Categorization</a>
+        <a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a>
+        <a href="budgets.html"><i class="fas fa-wallet"></i> Budgets</a>
+        <a href="transactions.html" class="active"><i class="fas fa-exchange-alt"></i> Transactions</a>
+        <a href="investments.html"><i class="fas fa-chart-pie"></i> Investments</a>
+        <a href="alerts.html"><i class="fas fa-bell"></i> Alerts</a>
+    </div>
+    <div class="main-content">
+        <div class="container-fluid">
+            <h1 class="mt-4 animate-fade">Transactions</h1>
+            <div class="card shadow-sm mt-4 animate-slide">
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search transactions..." id="transactionSearch">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                    <div class="mb-3">
+                        <label for="transactionFilter" class="form-label">Filter by</label>
+                        <select class="form-select" id="transactionFilter">
+                            <option value="all" selected>All</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionTable">
+                            <tr>
+                                <td>2025-03-26</td>
+                                <td>Supermarket</td>
+                                <td>Grocery</td>
+                                <td>-$75.00</td>
+                                <td><button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editTransactionModal">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>2025-03-24</td>
+                                <td>Salary</td>
+                                <td>Income</td>
+                                <td>$3,000.00</td>
+                                <td><button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editTransactionModal">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Transaction Modal -->
+    <div class="modal fade" id="editTransactionModal" tabindex="-1" aria-labelledby="editTransactionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTransactionModalLabel">Edit Transaction</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="transDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="transDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="transDesc" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="transDesc">
+                        </div>
+                        <div class="mb-3">
+                            <label for="transCategory" class="form-label">Category</label>
+                            <select class="form-select" id="transCategory">
+                                <option value="Grocery">Grocery</option>
+                                <option value="Income">Income</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="transAmount" class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="transAmount">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

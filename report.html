@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Personal Finance Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3 class="text-center py-3">Finance Manager</h3>
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+        <a href="chatbot.html"><i class="fas fa-robot"></i> Chatbot</a>
+        <a href="report.html" class="active"><i class="fas fa-chart-line"></i> Reports</a>
+        <a href="bank-passbook.html"><i class="fas fa-book"></i> Bank Passbook</a>
+        <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+        <a href="categorization.html"><i class="fas fa-tags"></i> Categorization</a>
+        <a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a>
+        <a href="budgets.html"><i class="fas fa-wallet"></i> Budgets</a>
+        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+        <a href="investments.html"><i class="fas fa-chart-pie"></i> Investments</a>
+        <a href="alerts.html"><i class="fas fa-bell"></i> Alerts</a>
+    </div>
+    <div class="main-content">
+        <div class="container-fluid">
+            <h1 class="mt-4 animate-fade">Financial Reports</h1>
+            <div class="card shadow-sm mt-4 animate-slide">
+                <div class="card-body">
+                    <h5>Income vs Expenses</h5>
+                    <div class="mb-3">
+                        <label for="reportPeriod" class="form-label">Select Period</label>
+                        <select class="form-select" id="reportPeriod">
+                            <option value="month" selected>This Month</option>
+                            <option value="quarter">This Quarter</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+                    <canvas id="incomeExpenseChart"></canvas>
+                    <button class="btn btn-primary mt-3">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

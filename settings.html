@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Personal Finance Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3 class="text-center py-3">Finance Manager</h3>
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        <a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a>
+        <a href="chatbot.html"><i class="fas fa-robot"></i> Chatbot</a>
+        <a href="report.html"><i class="fas fa-chart-line"></i> Reports</a>
+        <a href="bank-passbook.html"><i class="fas fa-book"></i> Bank Passbook</a>
+        <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+        <a href="categorization.html"><i class="fas fa-tags"></i> Categorization</a>
+        <a href="goals.html"><i class="fas fa-bullseye"></i> Goals</a>
+        <a href="budgets.html"><i class="fas fa-wallet"></i> Budgets</a>
+        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+        <a href="investments.html"><i class="fas fa-chart-pie"></i> Investments</a>
+        <a href="alerts.html"><i class="fas fa-bell"></i> Alerts</a>
+    </div>
+    <div class="main-content">
+        <div class="container-fluid py-3">
+            <!-- Settings Header -->
+            <div class="settings-header mb-3 animate-fade">
+                <h1 class="mb-0">Settings</h1>
+            </div>
+            <div class="settings-list">
+                <!-- App Appearance -->
+                <div class="settings-item animate-card" style="animation-delay: 0s;">
+                    <i class="fas fa-paint-brush me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Appearance</span>
+                        <p class="small text-muted">Dark Theme</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+                <!-- Account Management -->
+                <div class="settings-item animate-card" style="animation-delay: 0.1s;">
+                    <i class="fas fa-link me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Accounts</span>
+                        <p class="small text-muted">2 linked accounts</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+                <!-- Notification Settings -->
+                <div class="settings-item animate-card" style="animation-delay: 0.2s;">
+                    <i class="fas fa-bell me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Notifications</span>
+                        <p class="small text-muted">Budget, Bills On</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+                <!-- Currency & Format -->
+                <div class="settings-item animate-card" style="animation-delay: 0.3s;">
+                    <i class="fas fa-globe me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Currency & Format</span>
+                        <p class="small text-muted">USD, MM/DD/YYYY</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+                <!-- Data Management -->
+                <div class="settings-item animate-card" style="animation-delay: 0.4s;">
+                    <i class="fas fa-database me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Data Management</span>
+                        <p class="small text-muted">Backup, Restore, Reset</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+                <!-- Privacy Settings -->
+                <div class="settings-item animate-card" style="animation-delay: 0.5s;">
+                    <i class="fas fa-user-shield me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Privacy</span>
+                        <p class="small text-muted">Data Sharing Off</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+                <!-- Support & Feedback -->
+                <div class="settings-item animate-card" style="animation-delay: 0.6s;">
+                    <i class="fas fa-headset me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Support & Feedback</span>
+                        <p class="small text-muted">Help, FAQ, Feedback</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+                <!-- Budget Customization -->
+                <div class="settings-item animate-card" style="animation-delay: 0.7s;">
+                    <i class="fas fa-wallet me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Budget Settings</span>
+                        <p class="small text-muted">Monthly Period</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+                <!-- Sync Settings -->
+                <div class="settings-item animate-card" style="animation-delay: 0.8s;">
+                    <i class="fas fa-sync me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>Sync</span>
+                        <p class="small text-muted">Auto-Sync On</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="autoSyncToggle" checked>
+                    </div>
+                </div>
+                <!-- About App -->
+                <div class="settings-item animate-card" style="animation-delay: 0.9s;">
+                    <i class="fas fa-info-circle me-3"></i>
+                    <div class="flex-grow-1">
+                        <span>About App</span>
+                        <p class="small text-muted">Version 1.2.3</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-muted"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
